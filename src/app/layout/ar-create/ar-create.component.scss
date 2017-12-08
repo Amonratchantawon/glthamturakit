@@ -1,0 +1,16 @@
+.full {
+    width: 100% !important;
+}
+
+.breadcrumb {
+    .col-md-8 {
+        display: flex !important;
+        align-items: center !important;
+    }
+    .col-md-4 {
+        input {
+            display: inline !important;
+            width: 90% !important;
+        }
+    }
+}

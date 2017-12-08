@@ -1,0 +1,58 @@
+<nav class="sidebar" [ngClass]="{sidebarPushRight: isActive}">
+    <ul class="list-group">
+        <!-- <a routerLink="/dashboard" [routerLinkActive]="['router-link-active']" class="list-group-item" (click)="toggleSidebar()">
+            <i class="fa fa-fw fa-dashboard"></i>&nbsp;{{ 'dashboard' | translate }}
+        </a> -->
+        <!-- <a [routerLink]="['/expend-lists']" [routerLinkActive]="['router-link-active']" class="list-group-item" (click)="toggleSidebar()">
+            <i class="fa fa-file-o"></i>&nbsp;{{ 'expend-lists' | translate }}
+        </a>
+        <a [routerLink]="['/contact-lists']" [routerLinkActive]="['router-link-active']" class="list-group-item" (click)="toggleSidebar()">
+            <i class="fa fa-file-o"></i>&nbsp;{{ 'contact-lists' | translate }}
+        </a> -->
+        <a [routerLink]="['/account-type-list']" [routerLinkActive]="['router-link-active']" class="list-group-item" (click)="toggleSidebar()">
+            <i class="fa fa-list-ul"></i>&nbsp;{{ 'account-type' | translate }}
+        </a>
+        <a [routerLink]="['/account']" [routerLinkActive]="['router-link-active']" class="list-group-item" (click)="toggleSidebar()">
+            <i class="fa fa-list-ul"></i>&nbsp;{{ 'account' | translate }}
+        </a>
+        <a [routerLink]="['/ap-create']" [routerLinkActive]="['router-link-active']" class="list-group-item" (click)="toggleSidebar()">
+            <i class="fa fa-file-o"></i>&nbsp;{{ 'ap' | translate }}
+        </a>
+        <a [routerLink]="['/ar-create']" [routerLinkActive]="['router-link-active']" class="list-group-item" (click)="toggleSidebar()">
+            <i class="fa fa-file-o"></i>&nbsp;{{ 'ar' | translate }}
+        </a>
+        <a [routerLink]="['/pv-create']" [routerLinkActive]="['router-link-active']" class="list-group-item" (click)="toggleSidebar()">
+            <i class="fa fa-file-o"></i>&nbsp;{{ 'pv' | translate }}
+        </a>
+        <a [routerLink]="['/rv-create']" [routerLinkActive]="['router-link-active']" class="list-group-item" (click)="toggleSidebar()">
+            <i class="fa fa-file-o"></i>&nbsp;{{ 'rv' | translate }}
+        </a>
+        <a [routerLink]="['/jv-create']" [routerLinkActive]="['router-link-active']" class="list-group-item" (click)="toggleSidebar()">
+            <i class="fa fa-file-o"></i>&nbsp;{{ 'jv' | translate }}
+        </a>
+        <!-- <a [routerLink]="['/buy-create']" [routerLinkActive]="['router-link-active']" class="list-group-item" (click)="toggleSidebar()">
+            <i class="fa fa-edit"></i>&nbsp;{{ 'buy' | translate }}
+        </a>
+        <a [routerLink]="['/sale-create']" [routerLinkActive]="['router-link-active']" class="list-group-item" (click)="toggleSidebar()">
+            <i class="fa fa-edit"></i>&nbsp;{{ 'sale' | translate }}
+        </a> -->
+        <div class="nested-menu">
+            <a class="list-group-item" (click)="addExpandClass('pages')">
+                <span>
+                    <i class="fa fa-plus"></i>&nbsp; {{ 'gl-report' | translate }}</span>
+            </a>
+            <li class="nested" [class.expand]="showMenu === 'pages'">
+                <ul class="submenu">
+                    <a [routerLink]="['/gl-report']" [routerLinkActive]="['router-link-active']" class="list-group-item" (click)="toggleSidebar()">
+                        <i class="fa fa-file-o sub"></i>&nbsp;{{ 'do-gl-report' | translate }}
+                    </a>
+                </ul>
+                <ul class="submenu">
+                    <a [routerLink]="['/gl-report-view']" [routerLinkActive]="['router-link-active']" class="list-group-item" (click)="toggleSidebar()">
+                        <i class="fa fa-file-o sub"></i>&nbsp;{{ 'get-gl-report' | translate }}
+                    </a>
+                </ul>
+            </li>
+        </div>
+    </ul>
+</nav>

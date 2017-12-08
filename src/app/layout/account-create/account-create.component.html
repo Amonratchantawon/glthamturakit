@@ -1,0 +1,65 @@
+<div>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <i class="fa fa-list-ul"></i>
+            <a [routerLink]="['/account']">{{'account' | translate}}</a>
+        </li>
+        <li class="breadcrumb-item active">
+            <i class="fa fa-edit"></i> {{'new-account' | translate}}</li>
+    </ol>
+    <div class="row">
+        <div class="col-md-3 col-sm-1">
+        </div>
+        <div class="col-md-6 col-sm-10">
+            <form role="form">
+                <fieldset class="form-group">
+                    <label>{{'account-no' | translate}}</label>
+                    <span class="danger">*</span>
+                    <input class="form-control" type="text" [(ngModel)]="account.accountno" [ngModelOptions]="{standalone: true}" [disabled]="account._id">
+                </fieldset>
+                <fieldset class="form-group">
+                    <label>{{'account-name' | translate}}</label>
+                    <span class="danger">*</span>
+                    <input class="form-control" type="text" [(ngModel)]="account.name" [ngModelOptions]="{standalone: true}">
+                </fieldset>
+                <fieldset class="form-group">
+                    <label>{{'account-type' | translate}}</label>
+                    <select [(ngModel)]="accounttypeId" (change)="onChangeType(accounttypeId)" [ngModelOptions]="{standalone: true}" class="form-control">
+                        <option *ngFor="let type of accountTypeList" [value]="type._id" [attr.selected]="accounttypeId === type._id  ? true : null">
+                            {{type.accounttypeno}} {{type.accounttypename}}
+                        </option>
+                    </select>
+                </fieldset>
+                <!-- <fieldset class="form-group">
+                    <label>{{'vat' | translate}}</label>
+                    <input class="form-control" type="number" [(ngModel)]="account.vat" [ngModelOptions]="{standalone: true}">
+                </fieldset>
+                <fieldset class="form-group">
+                    <label>{{'unit-price' | translate}}</label>
+                    <input class="form-control" type="number" [(ngModel)]="account.unitprice" [ngModelOptions]="{standalone: true}">
+                </fieldset>
+                <fieldset class="form-group">
+                    <label>{{'parent' | translate}}</label>
+                    <select [(ngModel)]="account.parent" [ngModelOptions]="{standalone: true}" [disabled]="account._id" class="form-control">
+                        <option *ngFor="let parent of parents.accounts" [ngValue]="parent.accountno" [attr.selected]="account.parent === parent.accountno ? true : null">
+                            {{parent.accountno}} {{parent.name}}
+                        </option>
+                    </select>
+                </fieldset>
+                <fieldset class="form-group">
+                    <label>{{'status' | translate}}</label>
+                    <select [(ngModel)]="account.status" [ngModelOptions]="{standalone: true}" class="form-control">
+                        <option *ngFor="let sta of status" [ngValue]="sta" [attr.selected]="account.parent === sta ? true : null">
+                            {{sta}}
+                        </option>
+                    </select>
+                </fieldset> -->
+                <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-primary" (click)="saveAccount()">{{'save' | translate}}</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-3 col-sm-1">
+        </div>
+    </div>
+</div>

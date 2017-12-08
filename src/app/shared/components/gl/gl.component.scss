@@ -1,0 +1,124 @@
+.center {
+    text-align: center; //white-space: nowrap;
+}
+
+.right {
+    text-align: right;
+}
+
+.left {
+    text-align: left;
+}
+
+// date
+[type="date"] {
+    background: #fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png) 97% 50% no-repeat;
+}
+
+[type="date"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+} // date
+p {
+    // margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.debit {}
+
+.credit {
+    padding-left: 30px;
+}
+
+.reason {}
+
+.time-now {
+    position: absolute;
+    font-size: 14px;
+}
+
+.padding-top {
+    padding-top: 24px;
+}
+
+.padding-docno {
+    padding-top: 13px;
+}
+
+.border-no {
+    border-width: 0px 0px 0px 0px !important;
+    border-color: #ffffff !important;
+}
+
+.border-sum {
+    border-width: 0px 2px 2px 2px !important;
+    border-bottom-color: #eceeef !important;
+}
+
+.table th,
+.table td {
+    padding: 2px;
+}
+
+.aa {
+    border-width: 0px 1px 0px 0px;
+    border-color: #eceeef;
+}
+
+.table {
+    font-size: 14px;
+}
+
+.table-bordered {
+    border: 1px solid #ffffff;
+}
+
+.scroll_ {
+    /* width: 1000px; */
+    height: auto; // border: 1px solid red;
+    overflow: auto;
+}
+
+.table {
+    width: 100%;
+    /* max-width: 1000px; */
+    margin-bottom: 1rem;
+    min-width: 1000px;
+}
+
+.accoutno {
+    margin-top: 10%;
+}
+
+#acceach-left {
+    padding-left: 55px;
+}
+
+input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 4px;
+}
+
+hr {
+    border-top: 1px solid #9E9E9E;
+}
+
+.close-statements {
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+
+.table-bordered th, .table-bordered td {
+    border: 1px solid  #eceeef;
+    border-bottom-color: white;
+}
+.bottom-color{
+  border-bottom-color: #eceeef !important;  
+}
+
+

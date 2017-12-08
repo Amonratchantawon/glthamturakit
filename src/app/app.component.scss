@@ -1,0 +1,16 @@
+:host /deep/ .bar {
+    height: 100vh !important;
+    background-color: #607d8b !important;
+    opacity: 0.3 !important;
+}
+
+:host /deep/ .bar-shadow {
+    box-shadow: none !important;
+}
+
+:host /deep/.spinner-icon {
+    position: absolute!important;
+    top: 48vh !important;
+    width: 60px !important;
+    height: 60px !important;
+}

@@ -1,0 +1,59 @@
+<!-- <div class="just-padding" *ngIf="items"> -->
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4" text-center>
+            <nav class="navbar">
+                <input class="form-control" type="text" placeholder="{{ 'search' | translate}}" name="search" [(ngModel)]="filter">
+            </nav>
+        </div>
+        <div class="col-4"></div>
+    </div>
+    <div class="card-block table-responsive">
+        <table class="table">
+            <thead class="thead-default">
+                <tr>
+                    <th>รหัสบัญชี</th>
+                    <th>ชื่อบัญชี</th>
+                    <th>ประเภทบัญชี</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of items | filter:filter; let i = index" (click)="clickItem(item)">
+                    <th scope="row">{{item.accountno}}</th>
+                    <td>{{item.name}}</td>
+                    <td>{{ item.accounttype.accounttypeno }}-{{item.accounttype.accounttypename}}</td>
+                    <td><i class="fa fa-trash icon-trash" (click)="onDeleteItem(item)"></i></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- <div class="list-group list-group-root" class="main-list" *ngFor="let item of items | filter:filter; let i = index" (click)="clickItem(item)">
+        <div>
+            <div class="row">
+                <div class="col-sm-6 ">
+                    <i class="fa fa-caret-right none" [ngClass]="{'show': !item.expand && item[key].length}"></i>
+                    <i class="fa fa-caret-down none" [ngClass]="{'show': item.expand && item[key].length}"></i>
+                    &nbsp; {{item.accountno}} &nbsp; {{item.name}} &nbsp;
+                    <span class="{{item.status === 'active' ? 'active': 'inactive'}}">({{item.status}})</span>
+
+
+                </div>
+                <div class="col-4">
+                    {{ item.accounttype.accounttypeno }}-{{item.accounttype.accounttypename}}
+                </div>
+                <div class="col-sm-1">
+                    <i class="fa fa-edit icon-edit" (click)="onEditItem(item)"></i>
+                </div>
+                <div class="col-1">
+                    <i class="fa fa-trash icon-trash" (click)="onDeleteItem(item)"></i>
+                </div>
+
+            </div>
+            <hr>
+
+        </div>
+        <ui-tree *ngIf="item[key].length && item.expand == true" [key]="key" [data]="item[key]" (treeCallback)="treeReturn($event)"
+            (treeEditCallback)="onEdit($event)"></ui-tree>
+    </div> -->
+<!-- </div> -->

@@ -1,0 +1,17 @@
+.card-block {
+    padding: 0px 16px 8px 16px !important;
+}
+
+.thead-inverse th {
+    color: #fff;
+    background-color: #607D8B;
+}
+
+// auto complete
+:host /deep/ .completer-input {
+    width: 100% !important;
+    height: 36px !important;
+    border: 1px solid #cecece !important;
+    border-radius: 3px !important;
+    padding-left: 16px !important;
+}

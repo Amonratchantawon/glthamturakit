@@ -1,0 +1,76 @@
+<div class="row">
+    <div class="col-12">
+        <div class="table-responsive">
+            <table class="table table-hover table-striped">
+                <thead class="thead-inverse">
+                    <tr>
+                        <th>#</th>
+                        <th class="text-center" style="width:330px">{{ 'accountname' | translate}}</th>
+                        <th class="text-center" style="width:100px">{{ 'qty' | translate}}</th>
+                        <th class="text-center">{{ 'unit-price' | translate}}</th>
+                        <th class="text-center">{{ 'vat' | translate}}</th>
+                        <th class="text-center">{{ 'amount' | translate}}</th>
+                        <th class="text-center"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of items; let i = index">
+                        <td scope="row">{{i + 1}}</td>
+                        <td>
+                            <app-account-dropdown [data]="accounts" [selected]="item.account" (callback)="selected($event)"></app-account-dropdown>
+                        </td>
+                        <td class="text-center">
+                            <!--  (ngModelChange)="onChange(item)" -->
+                            <input class="form-control" type="number" [(ngModel)]="item.qty" [ngModelOptions]="{standalone: true}" style="text-align:center;">
+                        </td>
+                        <td class="text-center">
+                            <input class="form-control" type="number" [(ngModel)]="item.unitprice" [ngModelOptions]="{standalone: true}" style="text-align:center;">
+                        </td>
+                        <td class="text-center">
+                            <input class="form-control" type="number" [(ngModel)]="item.vatamount" [ngModelOptions]="{standalone: true}" style="text-align:center;">
+                        </td>
+                        <td class="text-center">
+                            <input class="form-control" type="number" [(ngModel)]="item.amount" [ngModelOptions]="{standalone: true}" style="text-align:center;">
+                        </td>
+                        <td class="text-center">
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-danger" (click)="removeItem(i)">
+                                    <i class="fa fa-trash"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"></th>
+                        <td>
+                            <app-account-dropdown [data]="accounts" (callback)="selected($event)"></app-account-dropdown>
+                        </td>
+                        <td class="text-center">
+                            <input class="form-control" type="number" [disabled]="!selectItem.account._id" [(ngModel)]="selectItem.qty" [ngModelOptions]="{standalone: true}"
+                                (ngModelChange)="onQtyChange(selectItem)" style="text-align:center;">
+                        </td>
+                        <td class="text-center">
+                            <input class="form-control" type="number" [disabled]="!selectItem.account._id" [(ngModel)]="selectItem.unitprice" [ngModelOptions]="{standalone: true}"
+                                style="text-align:center;">
+                        </td>
+                        <td class="text-center">
+                            <input class="form-control" type="number" [disabled]="!selectItem.account._id" [(ngModel)]="selectItem.vatamount" [ngModelOptions]="{standalone: true}"
+                                style="text-align:center;">
+                        </td>
+                        <td class="text-center">
+                            <input class="form-control" type="number" [disabled]="!selectItem.account._id" [(ngModel)]="selectItem.amount" [ngModelOptions]="{standalone: true}"
+                                style="text-align:center;">
+                        </td>
+                        <td class="text-center">
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-success" (click)="addItem()">
+                                    <i class="fa fa-check"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+    .just-padding {
+        padding-left: 30px;
+    }
+
+    // .list-group-item {
+    //     padding: 8px;
+    //     padding-left: 16px;
+    //     margin-top: 1px;
+    // }
+
+    hr{
+        margin-top: -15px;
+    }
+    .icon-edit {
+        position: absolute !important;
+        right: 30px !important; // margin-top: -18px;
+        color: #4CAF50;
+        margin-top: 1px;
+    }
+
+    .icon-trash {
+        position: absolute !important;
+        right: 60px !important; // margin-top: -18px;
+        color: #f44336;
+    }
+
+    .none {
+        color: transparent;
+    }
+
+    .show {
+        color: #666666 !important;
+    }
+
+    .active {
+        color: #4CAF50 !important;
+    }
+
+    .inactive {
+        color: #F44336 !important;
+    }

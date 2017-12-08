@@ -1,0 +1,34 @@
+<div class="row" style="margin-bottom: 15px;">
+    <div class="col-12 center">
+        <div class="radio">
+            <label>
+                <input type="radio" [(ngModel)]="glType" value="month"> รายเดือน
+            </label>
+            <label>
+                <input type="radio" [(ngModel)]="glType" value="year"> รายปี
+            </label>
+        </div>
+    </div>
+</div>
+<div class="row" style="margin-bottom: 15px;">
+    <div class="col-4 center"></div>
+    <div class="col-4 center">
+        <div *ngIf="glType === 'month'">
+            <input class="form-control" type="month" [(ngModel)]="month">
+        </div>
+        <div *ngIf="glType === 'year'">
+            <input class="form-control" type="number" [(ngModel)]="year" min="1997" max="3000">
+        </div>
+    </div>
+    <div class="col-4 center"></div>
+</div>
+<div class="row" style="margin-bottom: 15px;">
+    <div class="col-12 center">
+        <div>
+            <button type="button" class="btn btn-primary" (click)="genGlReport()">ทำงบ</button>
+            <button type="button" class="btn btn-default" *ngIf="glReport.type" (click)="closeGlReport()">ปิดงบ</button>
+        </div>
+    </div>
+</div>
+
+<app-gl [glReport]="glReport"></app-gl>

@@ -1,0 +1,38 @@
+<div class="login-page" [@routerTransition]>
+    <div class="row">
+        <div class="col-md-4 push-md-4">
+            <img class="user-avatar" src="assets/images/logo.png" width="150px" />
+            <h1>Account</h1>
+            <form role="form">
+                <div class="form-content">
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="signup.username" [ngModelOptions]="{standalone: true}" class="form-control input-underline input-lg"
+                            placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" [(ngModel)]="signup.password" [ngModelOptions]="{standalone: true}" class="form-control input-underline input-lg"
+                            placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="signup.firstName" [ngModelOptions]="{standalone: true}" class="form-control input-underline input-lg"
+                            placeholder="Firstname">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="signup.lastName" [ngModelOptions]="{standalone: true}" class="form-control input-underline input-lg"
+                            placeholder="Lastname">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" [(ngModel)]="signup.email" [ngModelOptions]="{standalone: true}" class="form-control input-underline input-lg"
+                            placeholder="E-mail">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="signup.tel" [ngModelOptions]="{standalone: true}" class="form-control input-underline input-lg"
+                            placeholder="Tel.">
+                    </div>
+                </div>
+                <a class="btn rounded-btn" (click)="onSignup(signup)"> Register </a>&nbsp;
+                <a class="btn rounded-btn" [routerLink]="['/login']"> Log in </a>
+            </form>
+        </div>
+    </div>
+</div>

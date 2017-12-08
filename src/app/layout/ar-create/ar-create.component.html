@@ -1,0 +1,43 @@
+<ol class="breadcrumb">
+    <div class="row">
+        <div class="col-md-8">
+            <li class="breadcrumb-item">
+                <i class="fa fa-list-ul"></i>
+                <a [routerLink]="['/ar-list']">{{'ar-list' | translate}}</a>
+            </li>
+            <li class="breadcrumb-item active">
+                <i class="fa fa-file-o"></i> {{ getMode() | translate}}{{'ar-list' | translate}}
+            </li>
+        </div>
+        <div class="col-md-4">
+            AR
+            <input type="text" class="form-control" [(ngModel)]="searchText" (keypress)="searching($event);" placeholder="{{'search' | translate}} {{'docno' | translate}}">
+        </div>
+    </div>
+</ol>
+<app-account-header [header]="'ar'" [dataForm]="accountForm" (addNew)="addNew()" (date)="docdate($event)"></app-account-header>
+<app-account-form [accountHeader]="'ar-debit'" [datas]="accountForm.debits" [accountTotal]="accountForm.totaldebit" (accountItems)="onDebits($event)"></app-account-form>
+<hr>
+<app-account-form [accountHeader]="'ar-credit'" [datas]="accountForm.credits" [accountTotal]="accountForm.totalcredit" (accountItems)="onCredits($event)"></app-account-form>
+<hr>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <fieldset class="form-group">
+            <label>{{'remark' | translate}}</label>
+            <textarea class="form-control" rows="6" cols="50" [(ngModel)]="accountForm.remark" [ngModelOptions]="{standalone: true}"
+                placeholder="{{'remark-inbox' | translate}}"></textarea>
+        </fieldset>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <button type="button" class="btn btn-success full" [disabled]="isSave" (click)="onSave()">{{'save' | translate}}</button>
+    </div>
+    <div class="col-md-3"></div>
+    <!-- <div class="col-md-4">
+        <button type="button" class="btn btn-danger full" (click)="onCancel()">{{'cancel' | translate}}</button>
+    </div> -->
+</div>

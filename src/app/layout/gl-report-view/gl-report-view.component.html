@@ -1,0 +1,72 @@
+<div>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item active">
+            <i class="fa fa-file-o"></i>
+            {{'get-gl-report' | translate}}
+        </li>
+    </ol>
+    <ngb-tabset>
+        <ngb-tab>
+            <ng-template ngbTabTitle>
+                {{ 'gl-month' | translate }}
+            </ng-template>
+            <ng-template ngbTabContent>
+                <div class="card-block table-responsive" *ngIf="glReportMonth && glReportMonth.length > 0">
+                    <table class="table">
+                        <thead class="thead-default">
+                            <tr>
+                                <th style="width:20%;">{{ 'month' | translate }}</th>
+                                <th>{{ 'gl-name' | translate }}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="cursor:pointer" *ngFor="let item of glReportMonth" (click)="glReportDetail(item._id,'month')">
+                                <th scope="row">{{ item.enddate | date:'MM-yyyy'}}</th>
+                                <td>{{item.statementname}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div *ngIf="glReportMonth && glReportMonth.length === 0">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <br>
+                            <p> {{'no-gl' | translate}}</p>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </ngb-tab>
+        <ngb-tab>
+            <ng-template ngbTabTitle>
+                {{ 'gl-year' | translate }}
+            </ng-template>
+            <ng-template ngbTabContent>
+                <div class="card-block table-responsive" *ngIf="glReportyear && glReportyear.length > 0">
+                    <table class="table">
+                        <thead class="thead-default">
+                            <tr>
+                                <th style="width:20%;">{{ 'year' | translate }}</th>
+                                <th>{{ 'gl-name' | translate }}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="cursor:pointer" *ngFor="let item of glReportyear" (click)="glReportDetail(item._id,'year')">
+                                <th scope="row">{{ item.enddate | date:'yyyy'}}</th>
+                                <td>{{item.statementname}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div *ngIf="glReportyear && glReportyear.length === 0">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <br>
+                            <p> {{'no-gl' | translate}}</p>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </ngb-tab>
+    </ngb-tabset>
+</div>

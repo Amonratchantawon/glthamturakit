@@ -1,0 +1,76 @@
+<div class="row">
+    <div class="col-12">
+        <div class="card-block table-responsive">
+            <div>
+                <p>
+                    <b>{{ accountHeader | translate}}</b>
+                </p>
+            </div>
+            <table class="table table-hover table-striped">
+                <thead class="thead-inverse">
+                    <tr>
+                        <th>#</th>
+                        <th>{{ 'accountname' | translate}}</th>
+                        <th>{{ 'description' | translate}}</th>
+                        <th width="150">{{ 'amount' | translate}}</th>
+                        <th class="text-right"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let itm of datas; let i = index">
+                        <td>{{i + 1}}</td>
+                        <td>
+                            <ng2-completer [clearUnselected]="true" [autoMatch]="true" textSearching="{{'searching' | translate}}" [(ngModel)]="itm.account.fullname" [placeholder]="'Account chart'" [textNoResults]="'Data not found.'" [textSearching]="'Please wait...'"
+                                [datasource]="dataService" (selected)="selected($event,itm.account,i)" [minSearchLength]="0"></ng2-completer>
+                        </td>
+                        <td>
+                            <input class="form-control" type="text" [(ngModel)]="itm.description" [ngModelOptions]="{standalone: true}">
+                        </td>
+                        <td>
+                            <input class="form-control" type="number" [(ngModel)]="itm.amount" (ngModelChange)="onChangeAmount()" [ngModelOptions]="{standalone: true}">
+                        </td>
+                        <td class="text-right">
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-danger" (click)="removeItem(i)">
+                                    <i class="fa fa-trash"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <ng2-completer [clearUnselected]="true" [autoMatch]="true" textSearching="{{'searching' | translate}}" [(ngModel)]="completerText" placeholder="{{'account-name' | translate}}" textNoResults="{{'data-not-found' | translate}}" [datasource]="dataService"
+                                (selected)="selected($event)" [minSearchLength]="0"></ng2-completer>
+                        </td>
+                        <td>
+                            <input class="form-control" type="text" [(ngModel)]="account.description" [ngModelOptions]="{standalone: true}">
+                        </td>
+                        <td>
+                            <input class="form-control" type="number" [(ngModel)]="account.amount" [ngModelOptions]="{standalone: true}">
+                        </td>
+                        <td class="text-right">
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-success" (click)="addItem()">
+                                    <i class="fa fa-check"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="row">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4">
+                    <fieldset class="form-group">
+                        <b>{{'total' | translate}}</b>
+                        <input class="form-control" type="number" [ngModel]="accountTotal" [ngModelOptions]="{standalone: true}" [disabled]="true">
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

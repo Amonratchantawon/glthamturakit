@@ -1,0 +1,21 @@
+<div>
+    <div class="row">
+        <div class="col-md-4 ">
+            <button *ngIf="dataForm._id" type="button" class="btn btn-success full" (click)="onAddNew()">
+                {{'new-create' | translate}}
+            </button>
+        </div>
+        <div class="col-md-4 text-center">
+        </div>
+        <div class="col-md-4">
+            <fieldset class="form-group">
+                <label>{{'docdate' | translate}}</label>
+                <input class="form-control" type="date" [ngModel]="dataForm.docdate" (ngModelChange)="selectDocDate($event)" [ngModelOptions]="{standalone: true}"
+                    useValueAsDate>
+            </fieldset>
+
+            <p>{{'docno' | translate}} {{dataForm.docno}}</p>
+        </div>
+    </div>
+    <hr>
+</div>

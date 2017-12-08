@@ -1,0 +1,37 @@
+<div>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <i class="fa fa-list-ul"></i> <a [routerLink]="['/expend-lists']">Expend</a>
+        </li>
+        <li class="breadcrumb-item active"><i class="fa fa-edit"></i> Create</li>
+    </ol>
+    <div class="row" [@routerTransition]>
+        <div class="col-md-3 col-sm-1">
+        </div>
+        <div class="col-md-6 col-sm-10">
+            <form role="form">
+                <fieldset class="form-group">
+                    <label>Name</label>
+                    <input class="form-control" type="text" [(ngModel)]="expend.name" [ngModelOptions]="{standalone: true}">
+                </fieldset>
+                <fieldset class="form-group">
+                    <label>Unit Price</label>
+                    <input class="form-control" type="number" [(ngModel)]="expend.unitprice" (ngModelChange)="onCalculate()" [ngModelOptions]="{standalone: true}">
+                </fieldset>
+                <fieldset class="form-group">
+                    <label>VAT(%)</label>
+                    <input class="form-control" type="number" [(ngModel)]="expend.vat" (ngModelChange)="onCalculate()" [ngModelOptions]="{standalone: true}">
+                </fieldset>
+                <fieldset class="form-group">
+                    <label>Net Amount</label>
+                    <input class="form-control" type="number" [(ngModel)]="expend.netamount" [ngModelOptions]="{standalone: true}" [disabled]="true">
+                </fieldset>
+            </form>
+            <div class="col-12 text-center">
+                <button type="submit" class="btn btn-primary" (click)="saveExpent()">Save</button>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-1">
+        </div>
+    </div>
+</div>

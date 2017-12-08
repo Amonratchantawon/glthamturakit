@@ -1,0 +1,52 @@
+<div>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item active">
+            <i class="fa fa-list-ul"></i> {{'new-account-type' | translate}}</li>
+    </ol>
+    <div class="row">
+        <div class="col-12 text-center">
+            <button type="submit" class="btn btn-primary" [routerLink]="['/account-type-create']">{{'new-account-type' | translate}}</button>
+        </div>
+    </div>
+    <!-- <div class="row">
+        <div class="col-12 list">
+            <div class="just-padding" *ngIf="accountTypeList">
+                <div class="list-group list-group-root" class="main-list" *ngFor="let item of accountTypeList" (click)="goAccountTypeDetail(item)">
+                    <a class="list-group-item list-group-item-action">
+                        &nbsp; {{item.accounttypeno}} &nbsp; {{item.accounttypename}} &nbsp;
+                        <i class="fa fa-trash icon-trash" (click)="onDeleteItem(item)"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4" text-center>
+            <nav class="navbar">
+                <input class="form-control" type="text" placeholder="{{ 'search' | translate}}" name="search" [(ngModel)]="filter">
+            </nav>
+        </div>
+        <div class="col-4"></div>
+    </div>
+    <div class="card-block table-responsive">
+        <table class="table">
+            <thead class="thead-default">
+                <tr>
+                    <th style="width:20%;">รหัสประเภท</th>
+                    <th>ชื่อประเภท</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of accountTypeList | filter:filter; let i = index" (click)="goAccountTypeDetail(item)">
+                    <th scope="row">{{ item.accounttypeno }}</th>
+                    <td>{{item.accounttypename}}</td>
+                    <td>
+                        <i class="fa fa-trash icon-trash" (click)="onDeleteItem(item)"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,57 @@
+<div>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <i class="fa fa-list-ul"></i> <a [routerLink]="['/contact-lists']">Contact</a>
+        </li>
+        <li class="breadcrumb-item active"><i class="fa fa-edit"></i> Create</li>
+    </ol>
+    <div class="row" [@routerTransition]>
+        <div class="col-md-3 col-sm-1">
+        </div>
+        <div class="col-md-6 col-sm-10">
+            <form role="form">
+                <fieldset class="form-group">
+                    <label>Name</label>
+                    <input class="form-control" type="text" [(ngModel)]="contact.name" [ngModelOptions]="{standalone: true}">
+                </fieldset>
+                <fieldset class="form-group">
+                    <label>Goverment ID</label>
+                    <input class="form-control" type="text" [(ngModel)]="contact.govermentId" [ngModelOptions]="{standalone: true}">
+                </fieldset>
+                <fieldset class="form-group">
+                    <label>Tel</label>
+                    <input class="form-control" type="tel" [(ngModel)]="contact.tel" [ngModelOptions]="{standalone: true}">
+                </fieldset>
+                <fieldset class="form-group">
+                    <label>E-mail</label>
+                    <input class="form-control" type="email" [(ngModel)]="contact.email" [ngModelOptions]="{standalone: true}">
+                </fieldset>
+                <fieldset class="form-group">
+                    <label>Address</label>
+                    <input class="form-control" type="text" [(ngModel)]="contact.address.address" [ngModelOptions]="{standalone: true}">
+                </fieldset>
+                <fieldset class="form-group">
+                    <label>Postcode</label>
+                    <input class="form-control" type="text" [(ngModel)]="contact.address.postcode" [ngModelOptions]="{standalone: true}">
+                </fieldset>
+                <fieldset class="form-group">
+                    <label>District</label>
+                    <input class="form-control" type="text" [(ngModel)]="contact.address.district" [ngModelOptions]="{standalone: true}">
+                </fieldset>
+                <fieldset class="form-group">
+                    <label>Subdistrict</label>
+                    <input class="form-control" type="text" [(ngModel)]="contact.address.subdistrict" [ngModelOptions]="{standalone: true}">
+                </fieldset>
+                <fieldset class="form-group">
+                    <label>Province</label>
+                    <input class="form-control" type="text" [(ngModel)]="contact.address.province" [ngModelOptions]="{standalone: true}">
+                </fieldset>
+                <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-primary" (click)="saveContact()">Save</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-3 col-sm-1">
+        </div>
+    </div>
+</div>

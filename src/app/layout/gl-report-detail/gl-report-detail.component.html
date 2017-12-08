@@ -1,0 +1,13 @@
+<div>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <i class="fa fa-file-o"></i>
+            <a [routerLink]="['/gl-report-view']">{{'get-gl-report' | translate}}</a>
+        </li>
+        <li class="breadcrumb-item active">
+            <!-- <i class="fa fa-edit"></i> {{'gl-report' | translate}}</li> -->
+            <i class="fa fa-edit"></i> {{ glReport.statementname }}</li>
+    </ol>
+</div>
+
+<app-gl [glReport]="glReport"></app-gl>

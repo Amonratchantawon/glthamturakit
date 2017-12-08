@@ -1,0 +1,57 @@
+<div>
+    <app-account-header [header]="'buy'" [icon]="'fa-edit'" (date)="docdate($event)"></app-account-header>
+    <form role="form card-block ">
+        <div class="bg-header">
+            <div class="row">
+                <div class="col-md-4">
+                    <fieldset class="form-group">
+                        <label>{{'contact-buy' | translate}}</label>
+                        <app-account-dropdown [data]="accounts" (callback)="selectedContact($event)"></app-account-dropdown>
+                    </fieldset>
+                </div>
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4">
+                </div>
+            </div>
+            <app-account-form-items [accounts]="accounts" (itemsCallback)="itemsCallback($event)"></app-account-form-items>
+            <div class="row">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4 text-left">
+                    <fieldset class="form-group">
+                        <label>Amount</label>
+                        <!-- [(ngModel)]="ap.amount" [ngModelOptions]="{standalone: true}" -->
+                        <input class="form-control" type="number" [disabled]="true">
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label>Vat Amount</label>
+                        <input class="form-control" type="number" [disabled]="true">
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label>Total Amount</label>
+                        <input class="form-control" type="number" [disabled]="true">
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label>Discount</label>
+                        <!--  [disabled]="selectedItems.length === 0 ? true : false" (ngModelChange)="onCalculate()" -->
+                        <input class="form-control" type="number">
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label>Net Amount</label>
+                        <input class="form-control" type="number" [disabled]="true">
+                    </fieldset>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <button type="button" class="btn btn-success full">{{'save' | translate}}</button>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+    </form>
+</div>

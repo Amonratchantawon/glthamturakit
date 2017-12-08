@@ -1,0 +1,19 @@
+<div>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item active">
+            <i class="fa fa-list-ul"></i> {{'account' | translate}}</li>
+    </ol>
+
+    <div class="row">
+        <div class="col-12 text-center">
+            <button type="submit" class="btn btn-primary" [routerLink]="['/account-create']">{{'new-account' | translate}}</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="ui-tree-list">
+                <ui-tree [data]="accounts" [key]="key" (treeCallback)="treeReturn($event)" (treeEditCallback)="onEdit($event)" (treeDeleteCallback)="onDelete($event)"></ui-tree>
+            </div>
+        </div>
+    </div>
+</div>
