@@ -1,0 +1,767 @@
+{
+    "type": "month",
+    "startdate": "2016-01-01T07:00:00.000+07:00",
+    "enddate": "2016-01-31T07:00:00.000+07:00",
+    "daily": {
+        "date": "2017-11-16T07:00:00.000+07:00",
+        "company": "Cyber Advance System annd Network Co.,Ltd",
+        "startdate": "2016-01-01T07:00:00.000+07:00",
+        "enddate": "2016-01-31T07:00:00.000+07:00",
+        "title": "สมุดรายวันทั่วไป",
+        "transaction": [
+            {
+                "docdate": "2016-01-04T07:00:00.000+07:00",
+                "docno": "PV59010401",
+                "list": [
+                    {
+                        "accountname": "ค่าเครื่องเขียนแบบพิมพ์",
+                        "accountno": "605003",
+                        "description": "ค่ากระดาษถ่ายเอกสาร",
+                        "document": "",
+                        "timestamp": "",
+                        "debit": 168.22,
+                        "credit": 0
+                    },
+                    {
+                        "accountname": "ภาษีซื้อ",
+                        "accountno": "101502",
+                        "description": "ค่ากระดาษถ่ายเอกสาร",
+                        "document": "",
+                        "timestamp": "",
+                        "debit": 11.78,
+                        "credit": 0
+                    },
+                    {
+                        "accountname": "เงินสด TEST",
+                        "accountno": "101101",
+                        "description": "ค่ากระดาษถ่ายเอกสาร",
+                        "document": "",
+                        "timestamp": "",
+                        "debit": 0,
+                        "credit": 180.00
+                    }
+                ],
+                "remark": "ค่ากระดาษถ่ายเอกสาร"
+            },
+            {
+                "docdate": "2016-01-04T07:00:00.000+07:00",
+                "docno": "PV59010402",
+                "list": [
+                    {
+                        "accountname": "ค่าเครื่องเขียนแบบพิมพ์",
+                        "accountno": "605003",
+                        "description": "ค่าหมึกพิมพ์",
+                        "document": "",
+                        "timestamp": "",
+                        "debit": 10700.93,
+                        "credit": 0
+                    },
+                    {
+                        "accountname": "ภาษีซื้อ",
+                        "accountno": "101502",
+                        "description": "ค่าหมึกพิมพ์",
+                        "document": "",
+                        "timestamp": "",
+                        "debit": 749.07,
+                        "credit": 0
+                    },
+                    {
+                        "accountname": "เงินสด TEST",
+                        "accountno": "101101",
+                        "description": "ค่าหมึกพิมพ์",
+                        "document": "",
+                        "timestamp": "",
+                        "debit": 0,
+                        "credit": 11450
+                    }
+                ],
+                "remark": ""
+            },
+            {
+                "docdate": "2016-01-04T07:00:00.000+07:00",
+                "docno": "PV59010403",
+                "list": [
+                    {
+                        "accountname": "คอมพิวเตอร์และอุปกรณ์",
+                        "accountno": "102101",
+                        "description": "ค่าอุปกรณ์คอมพิวเตอร์- Tablet",
+                        "document": "",
+                        "timestamp": "",
+                        "debit": 63141.12,
+                        "credit": 0
+                    },
+                    {
+                        "accountname": "ภาษีซื้อ",
+                        "accountno": "101502",
+                        "description": "ค่าอุปกรณ์คอมพิวเตอร์- Tablet",
+                        "document": "",
+                        "timestamp": "",
+                        "debit": 4419.88,
+                        "credit": 0
+                    },
+                    {
+                        "accountname": "เงินสด TEST",
+                        "accountno": "101101",
+                        "description": "ค่าอุปกรณ์คอมพิวเตอร์- Tablet",
+                        "document": "",
+                        "timestamp": "",
+                        "debit": 0,
+                        "credit": 67561
+                    }
+                ],
+                "remark": ""
+            },
+            {
+                "docdate": "2016-01-04T07:00:00.000+07:00",
+                "docno": "PV59010404",
+                "list": [
+                    {
+                        "accountname": "ซื้อสินค้า",
+                        "accountno": "501001",
+                        "description": "ค่าเครื่องคอมคอมพิวเตอร์",
+                        "document": "",
+                        "timestamp": "",
+                        "debit": 12900,
+                        "credit": 0
+                    },
+                    {
+                        "accountname": "ภาษีซื้อ",
+                        "accountno": "101502",
+                        "description": "ค่าเครื่องคอมคอมพิวเตอร์",
+                        "document": "",
+                        "timestamp": "",
+                        "debit": 903,
+                        "credit": 0
+                    },
+                    {
+                        "accountname": "เงินสด TEST",
+                        "accountno": "101101",
+                        "description": "ค่าเครื่องคอมคอมพิวเตอร์",
+                        "document": "",
+                        "timestamp": "",
+                        "debit": 0,
+                        "credit": 13803
+                    }
+                ],
+                "remark": ""
+            }
+        ]
+    },
+    "acceach": [
+        {
+            "date": "2017-11-16T07:00:00.000+07:00",
+            "company": "Cyber Advance System annd Network Co.,Ltd",
+            "startdate": "2016-01-01T07:00:00.000+07:00",
+            "enddate": "2016-01-31T07:00:00.000+07:00",
+            "title": "บัญชีแยกประเภทเงินสด",
+            "accoutno": "101101",
+            "bringforward": {
+                "docdate": "2016-01-01T07:00:00.000+07:00",
+                "docno": "B/F",
+                "accountname": "ยอดยกมา",
+                "accountno": "",
+                "document": "",
+                "timestamp": "",
+                "debit": 100000,
+                "credit": 0,
+                "description": ""
+            },
+            "carryforward": {
+                "docdate": "2016-01-01T07:00:00.000+07:00",
+                "docno": "",
+                "accountname": "ยอดยกไป",
+                "accountno": "",
+                "document": "",
+                "timestamp": "",
+                "debit": 0,
+                "credit": 7006,
+                "description": ""
+            },
+            "current": {
+                "debit": 92994,
+                "credit": 92994
+            },
+            "transaction": [
+                {
+                    "docdate": "2016-01-04T07:00:00.000+07:00",
+                    "list": [
+                        {
+                            "docdate": "2016-01-04T07:00:00.000+07:00",
+                            "docno": "PV59010401",
+                            "accountname": "ค่าเครื่องเขียนแบบพิมพ์",
+                            "accountno": "605003",
+                            "document": "",
+                            "timestamp": "",
+                            "debit": 0,
+                            "credit": 168.22,
+                            "description": "ค่ากระดาษถ่ายเอกสาร"
+                        },
+                        {
+                            "docdate": "2016-01-04T07:00:00.000+07:00",
+                            "docno": "PV59010401",
+                            "accountname": "ภาษีซื้อ",
+                            "accountno": "101502",
+                            "document": "",
+                            "timestamp": "",
+                            "debit": 0,
+                            "credit": 11.78,
+                            "description": "ค่ากระดาษถ่ายเอกสาร"
+                        },
+                        {
+                            "docdate": "2016-01-04T07:00:00.000+07:00",
+                            "docno": "PV59010402",
+                            "accountname": "ค่าเครื่องเขียนแบบพิมพ์",
+                            "accountno": "605003",
+                            "document": "",
+                            "timestamp": "",
+                            "debit": 0,
+                            "credit": 10700.93,
+                            "description": "ค่าหมึกพิมพ์"
+                        },
+                        {
+                            "docdate": "2016-01-04T07:00:00.000+07:00",
+                            "docno": "PV59010402",
+                            "accountname": "ภาษีซื้อ",
+                            "accountno": "101502",
+                            "document": "",
+                            "timestamp": "",
+                            "debit": 0,
+                            "credit": 749.07,
+                            "description": "ค่าหมึกพิมพ์"
+                        },
+                        {
+                            "docdate": "2016-01-04T07:00:00.000+07:00",
+                            "docno": "PV59010403",
+                            "accountname": "คอมพิวเตอร์และอุปกรณ์",
+                            "accountno": "102101",
+                            "document": "",
+                            "timestamp": "",
+                            "debit": 0,
+                            "credit": 63141.12,
+                            "description": "ค่าอุปกรณ์คอมพิวเตอร์- Tablet"
+                        },
+                        {
+                            "docdate": "2016-01-04T07:00:00.000+07:00",
+                            "docno": "PV59010403",
+                            "accountname": "ภาษีซื้อ",
+                            "accountno": "101502",
+                            "document": "",
+                            "timestamp": "",
+                            "debit": 0,
+                            "credit": 4419.88,
+                            "description": "ค่าอุปกรณ์คอมพิวเตอร์- Tablet"
+                        },
+                        {
+                            "docdate": "2016-01-04T07:00:00.000+07:00",
+                            "docno": "PV59010404",
+                            "accountname": "ซื้อสินค้า",
+                            "accountno": "501001",
+                            "document": "",
+                            "timestamp": "",
+                            "debit": 0,
+                            "credit": 12900,
+                            "description": "ค่าเครื่องคอมคอมพิวเตอร์"
+                        },
+                        {
+                            "docdate": "2016-01-04T07:00:00.000+07:00",
+                            "docno": "PV59010404",
+                            "accountname": "ภาษีซื้อ",
+                            "accountno": "101502",
+                            "document": "",
+                            "timestamp": "",
+                            "debit": 0,
+                            "credit": 903,
+                            "description": "ค่าเครื่องคอมคอมพิวเตอร์"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "date": "2017-11-16T07:00:00.000+07:00",
+            "company": "Cyber Advance System annd Network Co.,Ltd",
+            "startdate": "2016-01-01T07:00:00.000+07:00",
+            "enddate": "2016-01-31T07:00:00.000+07:00",
+            "title": "บัญชีแยกประเภทภาษีซื้อ",
+            "accoutno": "101502",
+            "bringforward": {
+                "docdate": "2016-01-01T07:00:00.000+07:00",
+                "docno": "B/F",
+                "accountname": "ยอดยกมา",
+                "accountno": "",
+                "document": "",
+                "timestamp": "",
+                "debit": 0,
+                "credit": 0,
+                "description": ""
+            },
+            "carryforward": {
+                "docdate": "2016-01-01T07:00:00.000+07:00",
+                "docno": "",
+                "accountname": "ยอดยกไป",
+                "accountno": "",
+                "document": "",
+                "timestamp": "",
+                "debit": 0,
+                "credit": 6083.73,
+                "description": ""
+            },
+            "current": {
+                "debit": 6083.73,
+                "credit": 6083.73
+            },
+            "transaction": [
+                {
+                    "docdate": "2016-01-04T07:00:00.000+07:00",
+                    "list": [
+                        {
+                            "docdate": "2016-01-04T07:00:00.000+07:00",
+                            "docno": "PV59010401",
+                            "accountname": "เงินสด",
+                            "accountno": "101101",
+                            "document": "",
+                            "timestamp": "",
+                            "debit": 11.78,
+                            "credit": 0,
+                            "description": "ค่ากระดาษถ่ายเอกสาร"
+                        },
+                        {
+                            "docdate": "2016-01-04T07:00:00.000+07:00",
+                            "docno": "PV59010402",
+                            "accountname": "เงินสด",
+                            "accountno": "101101",
+                            "document": "",
+                            "timestamp": "",
+                            "debit": 749.07,
+                            "credit": 0,
+                            "description": "ค่าหมึกพิมพ์"
+                        },
+                        {
+                            "docdate": "2016-01-04T07:00:00.000+07:00",
+                            "docno": "PV59010403",
+                            "accountname": "เงินสด",
+                            "accountno": "101101",
+                            "document": "",
+                            "timestamp": "",
+                            "debit": 4419.88,
+                            "credit": 0,
+                            "description": "ค่าอุปกรณ์คอมพิวเตอร์- Tablet"
+                        },
+                        {
+                            "docdate": "2016-01-04T07:00:00.000+07:00",
+                            "docno": "PV59010404",
+                            "accountname": "เงินสด",
+                            "accountno": "101101",
+                            "document": "",
+                            "timestamp": "",
+                            "debit": 903,
+                            "credit": 0,
+                            "description": "ค่าเครื่องคอมคอมพิวเตอร์"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "date": "2017-11-16T07:00:00.000+07:00",
+            "company": "Cyber Advance System annd Network Co.,Ltd",
+            "startdate": "2016-01-01T07:00:00.000+07:00",
+            "enddate": "2016-01-31T07:00:00.000+07:00",
+            "title": "บัญชีแยกประเภทคอมพิวเตอร์และอุปกรณ์",
+            "accoutno": "102101",
+            "bringforward": {
+                "docdate": "2016-01-01T07:00:00.000+07:00",
+                "docno": "B/F",
+                "accountname": "ยอดยกมา",
+                "accountno": "",
+                "document": "",
+                "timestamp": "",
+                "debit": 0,
+                "credit": 0,
+                "description": ""
+            },
+            "carryforward": {
+                "docdate": "2016-01-01T07:00:00.000+07:00",
+                "docno": "",
+                "accountname": "ยอดยกไป",
+                "accountno": "",
+                "document": "",
+                "timestamp": "",
+                "debit": 0,
+                "credit": 63141.21,
+                "description": ""
+            },
+            "current": {
+                "debit": 63141.21,
+                "credit": 63141.21
+            },
+            "transaction": [
+                {
+                    "docdate": "2016-01-04T07:00:00.000+07:00",
+                    "list": [
+                        {
+                            "docdate": "2016-01-04T07:00:00.000+07:00",
+                            "docno": "PV59010403",
+                            "accountname": "เงินสด",
+                            "accountno": "101101",
+                            "document": "",
+                            "timestamp": "",
+                            "debit": 63141.12,
+                            "credit": 0,
+                            "description": "ค่าอุปกรณ์คอมพิวเตอร์- Tablet"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "date": "2017-11-16T07:00:00.000+07:00",
+            "company": "Cyber Advance System annd Network Co.,Ltd",
+            "startdate": "2016-01-01T07:00:00.000+07:00",
+            "enddate": "2016-01-31T07:00:00.000+07:00",
+            "title": "บัญชีแยกประเภทซื้อสินค้า",
+            "accoutno": "501001",
+            "bringforward": {
+                "docdate": "2016-01-01T07:00:00.000+07:00",
+                "docno": "B/F",
+                "accountname": "ยอดยกมา",
+                "accountno": "",
+                "document": "",
+                "timestamp": "",
+                "debit": 0,
+                "credit": 0,
+                "description": ""
+            },
+            "carryforward": {
+                "docdate": "2016-01-01T07:00:00.000+07:00",
+                "docno": "",
+                "accountname": "ยอดยกไป",
+                "accountno": "",
+                "document": "",
+                "timestamp": "",
+                "debit": 0,
+                "credit": 12900,
+                "description": ""
+            },
+            "current": {
+                "debit": 12900,
+                "credit": 12900
+            },
+            "transaction": [
+                {
+                    "docdate": "2016-01-04T07:00:00.000+07:00",
+                    "list": [
+                        {
+                            "docdate": "2016-01-04T07:00:00.000+07:00",
+                            "docno": "PV59010404",
+                            "accountname": "เงินสด",
+                            "accountno": "101101",
+                            "document": "",
+                            "timestamp": "",
+                            "debit": 12900,
+                            "credit": 0,
+                            "description": "ค่าเครื่องคอมพิวเตอร์"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "date": "2017-11-16T07:00:00.000+07:00",
+            "company": "Cyber Advance System annd Network Co.,Ltd",
+            "startdate": "2016-01-01T07:00:00.000+07:00",
+            "enddate": "2016-01-31T07:00:00.000+07:00",
+            "title": "บัญชีแยกประเภทค่าเครื่องเขียนแบบพิมพ์",
+            "accoutno": "605003",
+            "bringforward": {
+                "docdate": "2016-01-01T07:00:00.000+07:00",
+                "docno": "B/F",
+                "accountname": "ยอดยกมา",
+                "accountno": "",
+                "document": "",
+                "timestamp": "",
+                "debit": 0,
+                "credit": 0,
+                "description": ""
+            },
+            "carryforward": {
+                "docdate": "2016-01-01T07:00:00.000+07:00",
+                "docno": "",
+                "accountname": "ยอดยกไป",
+                "accountno": "",
+                "document": "",
+                "timestamp": "",
+                "debit": 0,
+                "credit": 10869.15,
+                "description": ""
+            },
+            "current": {
+                "debit": 10869.15,
+                "credit": 10869.15
+            },
+            "transaction": [
+                {
+                    "docdate": "2016-01-04T07:00:00.000+07:00",
+                    "list": [
+                        {
+                            "docdate": "2016-01-04T07:00:00.000+07:00",
+                            "docno": "PV59010401",
+                            "accountname": "เงินสด",
+                            "accountno": "101101",
+                            "document": "",
+                            "timestamp": "",
+                            "debit": 168.22,
+                            "credit": 0,
+                            "description": "ค่ากระดาษถ่ายเอกสาร"
+                        },
+                        {
+                            "docdate": "2016-01-04T07:00:00.000+07:00",
+                            "docno": "PV59010402",
+                            "accountname": "เงินสด",
+                            "accountno": "101101",
+                            "document": "",
+                            "timestamp": "",
+                            "debit": 10700.93,
+                            "credit": 0,
+                            "description": "ค่าหมึกพิมพ์"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "gain": {
+        "date": "2017-11-16T07:00:00.000+07:00",
+        "company": "Cyber Advance System annd Network Co.,Ltd",
+        "startdate": "2016-01-01T07:00:00.000+07:00",
+        "enddate": "2016-01-31T07:00:00.000+07:00",
+        "title": "งบกำไรขาดทุน",
+        "transaction": [
+            {
+                "accounttype": "รายได้จากการดำเนินงาน",
+                "list": [
+                    {
+                        "accountno": "รายได้จากการขาย",
+                        "amount": 174279.30
+                    },
+                    {
+                        "accountno": "รายได้จากการบริการ",
+                        "amount": 3085616.34
+                    }
+                ],
+                "summary": 3259895.64
+            },
+            {
+                "accounttype": "กำไรขั้นต้น",
+                "list": [],
+                "summary": 3259895.64
+            },
+            {
+                "accounttype": "ค่าใช้จ่ายในการดำเนินงาน",
+                "list": [
+                    {
+                        "accountno": "เงินเดือนพนักงาน",
+                        "amount": 3498603.35
+                    },
+                    {
+                        "accountno": "โบนัสพนักงาน",
+                        "amount": 0
+                    },
+                    {
+                        "accountno": "เงินสมทบประกันสังคม",
+                        "amount": 102092
+                    },
+                    {
+                        "accountno": "เงินกองทุนทดแทน",
+                        "amount": 5394
+                    }
+                ],
+                "summary": 4821470.12
+            },
+            {
+                "accounttype": "ค่าใช้จ่ายในการผลิต",
+                "list": [
+                    {
+                        "accountno": "ค่าจ้างงานบุคคล",
+                        "amount": 606100
+                    }
+                ],
+                "summary": 606100
+            },
+            {
+                "accounttype": "กำไรสุทธิจากการดำเนินงาน",
+                "list": [],
+                "summary": -2167674.48
+            },
+            {
+                "accounttype": "รายได้อื่น",
+                "list": [
+                    {
+                        "accountno": "ดอกเบี้ยรับ",
+                        "amount": 657.30
+                    },
+                    {
+                        "accountno": "รายได้อื่น",
+                        "amount": 107934.83
+                    }
+                ],
+                "summary": 108592.13
+            },
+            {
+                "accounttype": "ค่าใช้จ่ายอื่น",
+                "list": [
+                    {
+                        "accountno": "ค่าใช้จ่ายต้องห้าม",
+                        "amount": 342643.01
+                    },
+                    {
+                        "accountno": "ภาษีซื้อไม่ขอคืน",
+                        "amount": 140.99
+                    },
+                    {
+                        "accountno": "เบี้ยปรับเงินเพิ่ม",
+                        "amount": 10937.32
+                    }
+                ],
+                "summary": 353721.32
+            },
+            {
+                "accounttype": "กำไรสุทธิ (ขาดทุนสุทธิ)",
+                "list": [],
+                "summary": -2412803.67
+            }
+        ]
+    },
+    "balance": {
+        "date": "2017-11-16T07:00:00.000+07:00",
+        "company": "Cyber Advance System annd Network Co.,Ltd",
+        "enddate": "2016-01-31T07:00:00.000+07:00",
+        "title": "งบแสดงฐานะการเงิน",
+        "asset": {
+            "name": "- สินทรัพย์ -",
+            "transaction": [
+                {
+                    "accounttype": "สินทรัพย์หมุนเวียน",
+                    "list": [
+                        {
+                            "accountno": "เงินสด",
+                            "amount": 24837.77
+                        },
+                        {
+                            "accountno": "เงินฝากธนาคารออมทรัพย์ TMB",
+                            "amount": 217879.81
+                        },
+                        {
+                            "accountno": "เงินฝากธนาคารออมทรัพย์ KBANK",
+                            "amount": 91373.20
+                        },
+                        {
+                            "accountno": "เงินฝากธนาคารกระแสรายวัน TMB",
+                            "amount": 272122.13
+                        },
+                        {
+                            "accountno": "ภาษีซื้อ",
+                            "amount": 0
+                        },
+                        {
+                            "accountno": "คอมพิวเตอร์และอุปกรณ์",
+                            "amount": 596507.66
+                        }
+                    ],
+                    "summary": 2139874.16
+                },
+                {
+                    "accounttype": "ที่ดิน อาคารและอุปกรณ์",
+                    "list": [
+                        {
+                            "accountno": "ส่วนปรับปรุงสำนักงาน",
+                            "amount": 2429205.61
+                        },
+                        {
+                            "accountno": "ค่าเสื่อมราคาสะสม-ส่วนปรับปรุงสำนักงาน",
+                            "amount": 330712.77
+                        },
+                        {
+                            "accountno": "เฟอร์นิเจอร์",
+                            "amount": 247205.61
+                        },
+                        {
+                            "accountno": "อุปกรณ์เครื่องใช้สำนักงาน",
+                            "amount": 141396.16
+                        }
+                    ],
+                    "summary": 1857270.50
+                },
+                {
+                    "accounttype": "สินทรัพย์อื่น",
+                    "list": [
+                        {
+                            "accountno": "ภาษีเงินได้ถูกหัก ณ ที่จ่ายปีก่อน",
+                            "amount": 121779.89
+                        }
+                    ],
+                    "summary": 121779.89
+                },
+                {
+                    "accounttype": "รวมสินทรัพย์",
+                    "list": [],
+                    "summary": 4118924.55
+                }
+            ]
+        },
+        "debt": {
+            "name": "- หนี้สินและส่วนของผู้ถือหุ้น -",
+            "transaction": [
+                {
+                    "accounttype": "หนี้สินหมุนเวียน",
+                    "list": [
+                        {
+                            "accountno": "เงินกู้ยืมจากกรรมการ",
+                            "amount": 6826388.98
+                        },
+                        {
+                            "accountno": "เจ้าหนี้กรมสรรพากร",
+                            "amount": 4898.30
+                        },
+                        {
+                            "accountno": "ภาษีขาย",
+                            "amount": 0
+                        },
+                        {
+                            "accountno": "ดอกเบี้ยค้างจ่าย",
+                            "amount": 114146
+                        }
+                    ],
+                    "summary": 7164959.15,
+                    "sumtrans": {
+                        "accountno": "- รวมหนี้สิน -",
+                        "amount": 7164959.15
+                    }
+                },
+                {
+                    "accounttype": "ส่วนของผู้ถือหุ้น",
+                    "list": [
+                        {
+                            "accountno": "ทุนจดทะเบียนและเรียกชำระแล้ว",
+                            "amount": 1000000
+                        },
+                        {
+                            "accountno": "กำไรสะสม",
+                            "amount": -4046034.60
+                        }
+                    ],
+                    "summary": -3046034.60,
+                    "sumtrans": {
+                        "accountno": "- รวมส่วนของผู้ถือหุ้น -",
+                        "amount": -3046034.60
+                    }
+                },
+                {
+                    "accounttype": "รวมหนี้สินและส่วนของผู้ถือหุ้น",
+                    "list": [],
+                    "summary": 4118924.55
+                }
+            ]
+        }
+    }
+}
