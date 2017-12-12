@@ -1,8 +1,9 @@
 <nav class="sidebar" [ngClass]="{sidebarPushRight: isActive}">
     <ul class="list-group">
-        <!-- <a routerLink="/dashboard" [routerLinkActive]="['router-link-active']" class="list-group-item" (click)="toggleSidebar()">
-            <i class="fa fa-fw fa-dashboard"></i>&nbsp;{{ 'dashboard' | translate }}
-        </a> -->
+
+        <a routerLink="/gl-report-company" [routerLinkActive]="['router-link-active']" class="list-group-item" (click)="toggleSidebar()">
+            <i class="fa fa-fw fa-dashboard"></i>&nbsp;{{ 'company' | translate }}
+        </a>
         <!-- <a [routerLink]="['/expend-lists']" [routerLinkActive]="['router-link-active']" class="list-group-item" (click)="toggleSidebar()">
             <i class="fa fa-file-o"></i>&nbsp;{{ 'expend-lists' | translate }}
         </a>

@@ -68,5 +68,6 @@
     "no-gl":"Report not found.",
     "month":"Month",
     "year":"Year",
-    "gl-name":"Statement name"
+    "gl-name":"Statement name",
+    "company":"Company"
 }

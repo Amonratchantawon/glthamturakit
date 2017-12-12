@@ -29,7 +29,8 @@ const routes: Routes = [
             { path: 'buy-create', loadChildren: './buy-create/buy-create.module#BuyCreateModule' },            
             { path: 'gl-report', loadChildren: './gl-report/gl-report.module#GlReportModule' },      
             { path: 'gl-report-view', loadChildren: './gl-report-view/gl-report-view.module#GlReportViewModule' },     
-            { path: 'gl-report-detail', loadChildren: './gl-report-detail/gl-report-detail.module#GlReportDetailModule' }            
+            { path: 'gl-report-detail', loadChildren: './gl-report-detail/gl-report-detail.module#GlReportDetailModule' },
+            { path: 'gl-report-company', loadChildren: './company/company.module#CompanyComponentModule' }
         ]
     }
 ];
