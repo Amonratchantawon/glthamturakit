@@ -69,5 +69,11 @@
     "month":"Month",
     "year":"Year",
     "gl-name":"Statement name",
-    "company":"Company"
+    "company":"Company",
+    "address": "Address",
+    "subDistrict": "Subdistrict",
+    "district": "District",
+    "province": "Province",
+    "postCode": "PostalCode",
+    "phone":"Phone"
 }

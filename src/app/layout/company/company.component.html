@@ -1,3 +1,69 @@
-<p>
-  company works!
-</p>
+<div>
+    <ol class="breadcrumb">
+        <!-- <li class="breadcrumb-item">
+            <i class="fa fa-list-ul"></i>
+            <a [routerLink]="['/account-type-list']">{{'account-type' | translate}}</a>
+        </li> -->
+        <li class="breadcrumb-item active">
+            <i class="fa fa-edit"></i> {{'company' | translate}}</li>
+    </ol>
+
+    <div class="row">
+        <div class="col-md-3 col-sm-1">
+        </div>
+        <div class="col-md-6 col-sm-10">
+            <form role="form">
+                <fieldset class="form-group">
+                    <label>{{'company' | translate}}</label>
+                    <span class="danger">*</span>
+                    <input class="form-control" type="text" [(ngModel)]="companyData.name" [ngModelOptions]="{standalone: true}">
+                </fieldset>
+                <fieldset class="form-group">
+                    <label>{{'address' | translate}}</label>
+                    <span class="danger">*</span>
+                    <input class="form-control" type="text" [(ngModel)]="companyData.address" [ngModelOptions]="{standalone: true}">
+                </fieldset>
+                <fieldset class="form-group">
+                    <label>{{'subDistrict' | translate}}</label>
+                    <span class="danger">*</span>
+                    <input class="form-control" type="text" [(ngModel)]="companyData.subDistrict" [ngModelOptions]="{standalone: true}">
+                </fieldset>
+                <fieldset class="form-group">
+                    <label>{{'district' | translate}}</label>
+                    <span class="danger">*</span>
+                    <input class="form-control" type="text" [(ngModel)]="companyData.district" [ngModelOptions]="{standalone: true}">
+                </fieldset>
+                <fieldset class="form-group">
+                    <label>{{'province' | translate}}</label>
+                    <span class="danger">*</span>
+                    <input class="form-control" type="text" [(ngModel)]="companyData.province" [ngModelOptions]="{standalone: true}">
+                </fieldset>
+                <fieldset class="form-group">
+                    <label>{{'postalCode' | translate}}</label>
+                    <span class="danger">*</span>
+                    <input class="form-control" type="text" [(ngModel)]="companyData.postCode" [ngModelOptions]="{standalone: true}">
+                </fieldset>
+                <fieldset class="form-group">
+                    <label>{{'phone' | translate}}</label>
+                    <span class="danger">*</span>
+                    <input class="form-control" type="text" [(ngModel)]="companyData.phone" [ngModelOptions]="{standalone: true}">
+                </fieldset>
+
+                <!-- <fieldset class="form-group">
+                    <label>{{'account-type' | translate}}</label>
+                    <select [(ngModel)]="accounttypeId" (change)="onChangeType(accounttypeId)" [ngModelOptions]="{standalone: true}" class="form-control">
+                        <option *ngFor="let type of accountTypeList" [value]="type._id" [attr.selected]="accounttypeId === type._id  ? true : null">
+                            {{type.accounttypeno}} {{type.accounttypename}}
+                        </option>
+                    </select>
+                </fieldset> -->
+
+                <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-primary" (click)="saveCompany(companyData)">{{'save' | translate}}</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-3 col-sm-1">
+        </div>
+    </div>
+</div>

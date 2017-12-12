@@ -69,5 +69,11 @@
     "month":"เดือน",
     "year":"ปี",
     "gl-name":"ชื่อรายงาน",
-    "company":"บริษัท"
+    "company":"บริษัท",
+    "address": "ที่อยู่",
+    "subDistrict": "ตำบล/แขวง",
+    "district": "อำเภอ/เขต",
+    "province": "จังหวัด",
+    "postCode": "รหัสไปรษณีย์",
+    "phone":"เบอร์โทร"
 }
