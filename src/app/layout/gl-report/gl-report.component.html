@@ -7,6 +7,9 @@
             <label>
                 <input type="radio" [(ngModel)]="glType" value="year"> รายปี
             </label>
+            <label>
+                <input type="radio" [(ngModel)]="glType" value="custom"> กำหนดเอง
+            </label>
         </div>
     </div>
 </div>
@@ -18,6 +21,10 @@
         </div>
         <div *ngIf="glType === 'year'">
             <input class="form-control" type="number" [(ngModel)]="year" min="1997" max="3000">
+        </div>
+        <div *ngIf="glType === 'custom'">
+            <input class="form-control" type="date" [(ngModel)]="startDate">
+            <input class="form-control" type="date" [(ngModel)]="endDate" >            
         </div>
     </div>
     <div class="col-4 center"></div>

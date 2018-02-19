@@ -115,6 +115,78 @@
             </div>
         </ng-template>
     </ngb-tab>
+    <!-- ..balancetestsTab.. -->
+    <ngb-tab title="งบทดลอง">
+        <ng-template ngbTabContent>
+            <div *ngIf="glReport.balancetests">
+                <div class="time-now">
+                    <br>
+                    <p>{{glReport.balancetests.date | date:'dd/MM/yyyy'}}</p>
+                    <p>{{glReport.balancetests.date | date:'HH:mm:ss'}}</p>
+                </div>
+                <div class="center">
+                    <br>
+                    <p *ngIf="glReport.balancetests.company">{{glReport.balance.company}}</p>
+                    <p>{{glReport.balancetests.title}}</p>
+                    <p>ตั้งแต่วันที่ {{glReport.firstDayText}} จนถึงวันที่ {{glReport.lastDayText}}
+                    </p>
+                    <br>
+                </div>
+                <div class="scroll_ ">
+                    <table class="table table-bordered">
+                        <thead style="border-bottom: 2px solid #eceeef;">
+                            <tr>
+                                <th  rowspan="2">รหัสบัญชี</th>
+                                <th  rowspan="2">ชื่อบัญชี</th>
+                                <th class="center" colspan="2">ยอดยกมา</th>
+                                <th class="center" colspan="2">ยอดประจำงวด</th>
+                                <th class="center" colspan="2">ยอดสะสม</th>
+                            </tr>
+                           
+                            <tr>
+                                <th class="center">เดบิต</th>
+                                <th class="center">เครดิด</th> 
+
+                                <th class="center">เดบิต</th>
+                                <th class="center">เครดิด</th> 
+
+                                <th class="center">เดบิต</th>
+                                <th class="center">เครดิด</th>                                
+                            </tr>
+                        </thead>
+                        <tbody style="border-bottom: 2px solid #eceeef;">
+                            <tr *ngFor="let transaction of glReport.balancetests.transaction">
+                                <td class="padding-top">
+                                    {{transaction.accountno}}
+                                </td>
+                                <td class="padding-top">
+                                    {{transaction.name}}
+                                </td>
+                                <td class="right" ><span *ngIf="transaction.bfdebit > 0">{{transaction.bfdebit | number : '1.2-2'}}</span></td>
+                                <td class="right"><span *ngIf="transaction.bfcredit > 0">{{transaction.bfcredit | number : '1.2-2' }}</span></td>
+
+                                <td class="right"><span *ngIf="transaction.currdebit > 0">{{transaction.currdebit | number : '1.2-2'}}</span> </td>
+                                <td class="right"> <span *ngIf="transaction.currcredit > 0">{{transaction.currcredit | number : '1.2-2'}}</span></td>
+
+                                <td class="right"> <span *ngIf="transaction.afdebit > 0">{{transaction.afdebit | number : '1.2-2'}}</span></td>
+                                <td class="right"><span *ngIf="transaction.afcredit > 0">{{transaction.afcredit | number : '1.2-2'}}</span></td>
+                            </tr>
+                            <tr >
+                                <td class="center" colspan="2" ><b>รวมทั้งสิ้น</b></td>
+                                <td class="right"><span *ngIf="glReport.balancetests.summary.bfdebit > 0">{{glReport.balancetests.summary.bfdebit | number : '1.2-2'}}</span> </td>
+                                <td class="right"><span *ngIf="glReport.balancetests.summary.bfcredit > 0">{{glReport.balancetests.summary.bfcredit | number : '1.2-2'}}</span> </td>
+                                <td class="right"><span *ngIf="glReport.balancetests.summary.currdebit > 0">{{glReport.balancetests.summary.currdebit | number : '1.2-2'}}</span> </td>
+                                <td class="right"><span *ngIf="glReport.balancetests.summary.currcredit > 0">{{glReport.balancetests.summary.currcredit | number : '1.2-2'}}</span> </td>
+                                <td class="right"><span *ngIf="glReport.balancetests.summary.afdebit > 0">{{c | number : '1.2-2'}}</span> </td>
+                                <td class="right"><span *ngIf="glReport.balancetests.summary.afcredit > 0">{{glReport.balancetests.summary.afcredit | number : '1.2-2'}}</span> </td>            
+                              </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </ng-template>
+    </ngb-tab>
     <!-- End ..dailyTab.. -->
     <!-- ..acceachTab.. -->
     <ngb-tab title="บัญชีแยกประเภท">
@@ -531,75 +603,5 @@
         </ng-template>
     </ngb-tab>
     <!-- End ..balanceTab.. -->
-    <ngb-tab title="งบทดลอง">
-        <ng-template ngbTabContent>
-            <div *ngIf="glReport.balancetests">
-                <div class="time-now">
-                    <br>
-                    <p>{{glReport.balancetests.date | date:'dd/MM/yyyy'}}</p>
-                    <p>{{glReport.balancetests.date | date:'HH:mm:ss'}}</p>
-                </div>
-                <div class="center">
-                    <br>
-                    <p *ngIf="glReport.balancetests.company">{{glReport.balance.company}}</p>
-                    <p>{{glReport.balancetests.title}}</p>
-                    <p>ตั้งแต่วันที่ {{glReport.firstDayText}} จนถึงวันที่ {{glReport.lastDayText}}
-                    </p>
-                    <br>
-                </div>
-                <div class="scroll_ ">
-                    <table class="table table-bordered">
-                        <thead style="border-bottom: 2px solid #eceeef;">
-                            <tr>
-                                <th  rowspan="2">รหัสบัญชี</th>
-                                <th  rowspan="2">ชื่อบัญชี</th>
-                                <th class="center" colspan="2">ยอดยกมา</th>
-                                <th class="center" colspan="2">ยอดประจำงวด</th>
-                                <th class="center" colspan="2">ยอดสะสม</th>
-                            </tr>
-                           
-                            <tr>
-                                <th class="center">เดบิต</th>
-                                <th class="center">เครดิด</th> 
-
-                                <th class="center">เดบิต</th>
-                                <th class="center">เครดิด</th> 
-
-                                <th class="center">เดบิต</th>
-                                <th class="center">เครดิด</th>                                
-                            </tr>
-                        </thead>
-                        <tbody style="border-bottom: 2px solid #eceeef;">
-                            <tr *ngFor="let transaction of glReport.balancetests.transaction">
-                                <td class="padding-top">
-                                    {{transaction.accountno}}
-                                </td>
-                                <td class="padding-top">
-                                    {{transaction.name}}
-                                </td>
-                                <td class="right" ><span *ngIf="transaction.bfdebit > 0">{{transaction.bfdebit | number : '1.2-2'}}</span></td>
-                                <td class="right"><span *ngIf="transaction.bfcredit > 0">{{transaction.bfcredit | number : '1.2-2' }}</span></td>
-
-                                <td class="right"><span *ngIf="transaction.currdebit > 0">{{transaction.currdebit | number : '1.2-2'}}</span> </td>
-                                <td class="right"> <span *ngIf="transaction.currcredit > 0">{{transaction.currcredit | number : '1.2-2'}}</span></td>
-
-                                <td class="right"> <span *ngIf="transaction.afdebit > 0">{{transaction.afdebit | number : '1.2-2'}}</span></td>
-                                <td class="right"><span *ngIf="transaction.afcredit > 0">{{transaction.afcredit | number : '1.2-2'}}</span></td>
-                            </tr>
-                            <tr >
-                                <td class="center" colspan="2" ><b>รวมทั้งสิ้น</b></td>
-                                <td class="right"><span *ngIf="glReport.balancetests.summary.bfdebit > 0">{{glReport.balancetests.summary.bfdebit | number : '1.2-2'}}</span> </td>
-                                <td class="right"><span *ngIf="glReport.balancetests.summary.bfcredit > 0">{{glReport.balancetests.summary.bfcredit | number : '1.2-2'}}</span> </td>
-                                <td class="right"><span *ngIf="glReport.balancetests.summary.currdebit > 0">{{glReport.balancetests.summary.currdebit | number : '1.2-2'}}</span> </td>
-                                <td class="right"><span *ngIf="glReport.balancetests.summary.currcredit > 0">{{glReport.balancetests.summary.currcredit | number : '1.2-2'}}</span> </td>
-                                <td class="right"><span *ngIf="glReport.balancetests.summary.afdebit > 0">{{c | number : '1.2-2'}}</span> </td>
-                                <td class="right"><span *ngIf="glReport.balancetests.summary.afcredit > 0">{{glReport.balancetests.summary.afcredit | number : '1.2-2'}}</span> </td>            
-                              </tr>
-                        </tbody>
-                    </table>
-
-                </div>
-            </div>
-        </ng-template>
-    </ngb-tab>
+    
 </ngb-tabset>

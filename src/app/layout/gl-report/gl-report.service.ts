@@ -13,11 +13,18 @@ export class GlReportService {
 
   }
 
-  getGlReport(glTyp, glDate) {
+  getGlReport(glTyp, glDate, glEndDate) {
     // return this.http.get('./assets/JSON/gl-report.json').toPromise()    
-    return this.http.get(Constants.URL + 'api/glreport/' + glTyp + '/' + glDate).toPromise()
+    if(glEndDate){
+      return this.http.get(Constants.URL + 'api/glreport/' + glTyp + '/' + glDate  + '/' + glEndDate).toPromise()
       .then(response => response.json() as GlReportModel)
       .catch(this.handleError);
+    }else{
+      return this.http.get(Constants.URL + 'api/glreport/' + glTyp + '/' + glDate).toPromise()
+      .then(response => response.json() as GlReportModel)
+      .catch(this.handleError);
+    }
+    
   }
 
   postGlReportMonth(gl) {

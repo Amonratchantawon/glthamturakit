@@ -13,6 +13,8 @@ export class GlReportComponent implements OnInit {
   glType: string = 'month';
   month: Date;
   year: number = new Date().getFullYear();
+  startDate:Date;
+  endDate:Date;
   currentLang: string;
 
   constructor(
@@ -32,6 +34,7 @@ export class GlReportComponent implements OnInit {
   getGlReport() {
 
     let glDate;
+    let glEndDate;
     if (this.glType === 'month') {
       if (!this.month) {
         this.currentLang = this.translate.currentLang;
@@ -43,11 +46,14 @@ export class GlReportComponent implements OnInit {
         return false;
       }
       glDate = this.month;
-    } else {
+    } else if(this.glType === 'year') {
       glDate = new Date(this.year, 1, 1);
+    }else{
+        glDate =this.startDate,
+        glEndDate =this.endDate
     }
 
-    this.glReportService.getGlReport(this.glType, glDate).then((gl) => {
+    this.glReportService.getGlReport(this.glType, glDate, glEndDate).then((gl) => {
       this.glReport = gl;
     }, (error) => {
       alert(JSON.stringify(error));
