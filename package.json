@@ -27,7 +27,7 @@
         "@angular/platform-browser": "^4.3.1",
         "@angular/platform-browser-dynamic": "^4.3.1",
         "@angular/router": "^4.3.1",
-        "@ng-bootstrap/ng-bootstrap": "^1.0.0-alpha.26",
+        "@ng-bootstrap/ng-bootstrap": "1.0.0-alpha.26",
         "@ngx-translate/core": "^7.0.0",
         "@ngx-translate/http-loader": "^0.1.0",
         "angular-date-value-accessor": "0.0.2",
