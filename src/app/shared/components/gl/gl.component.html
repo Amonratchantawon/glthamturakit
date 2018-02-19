@@ -551,8 +551,8 @@
                     <table class="table table-bordered">
                         <thead style="border-bottom: 2px solid #eceeef;">
                             <tr>
-                                <th class="center" rowspan="2">รหัสบัญชี</th>
-                                <th class="center" rowspan="2">ชื่อบัญชี</th>
+                                <th  rowspan="2">รหัสบัญชี</th>
+                                <th  rowspan="2">ชื่อบัญชี</th>
                                 <th class="center" colspan="2">ยอดยกมา</th>
                                 <th class="center" colspan="2">ยอดประจำงวด</th>
                                 <th class="center" colspan="2">ยอดสะสม</th>
@@ -577,21 +577,24 @@
                                 <td class="padding-top">
                                     {{transaction.name}}
                                 </td>
-                                <td>{{transaction.bfdebit ? transaction.bfdebit :''}}</td>
-                                <td>{{transaction.bfcredit ? transaction.bfcredit :''}}</td>
+                                <td class="right" ><span *ngIf="transaction.bfdebit > 0">{{transaction.bfdebit | number : '1.2-2'}}</span></td>
+                                <td class="right"><span *ngIf="transaction.bfcredit > 0">{{transaction.bfcredit | number : '1.2-2' }}</span></td>
 
-                                <td>{{transaction.afdebit ? transaction.afdebit :''}}</td>
-                                <td>{{transaction.afcredit ? transaction.afcredit :''}}</td>
+                                <td class="right"><span *ngIf="transaction.currdebit > 0">{{transaction.currdebit | number : '1.2-2'}}</span> </td>
+                                <td class="right"> <span *ngIf="transaction.currcredit > 0">{{transaction.currcredit | number : '1.2-2'}}</span></td>
 
-                                <td>{{transaction.currdebit ? transaction.currdebit :''}}</td>
-                                <td>{{transaction.currcredit ? transaction.currcredit :''}}</td>
+                                <td class="right"> <span *ngIf="transaction.afdebit > 0">{{transaction.afdebit | number : '1.2-2'}}</span></td>
+                                <td class="right"><span *ngIf="transaction.afcredit > 0">{{transaction.afcredit | number : '1.2-2'}}</span></td>
                             </tr>
-                            <!-- <tr>
-                                <td>01</td>
-                                <td>อำนาจ</td>
-                                <td>Amnaj</td>
-                                <td align="right">30,000</td>
-                              </tr> -->
+                            <tr >
+                                <td class="center" colspan="2" ><b>รวมทั้งสิ้น</b></td>
+                                <td class="right"><span *ngIf="glReport.balancetests.summary.bfdebit > 0">{{glReport.balancetests.summary.bfdebit | number : '1.2-2'}}</span> </td>
+                                <td class="right"><span *ngIf="glReport.balancetests.summary.bfcredit > 0">{{glReport.balancetests.summary.bfcredit | number : '1.2-2'}}</span> </td>
+                                <td class="right"><span *ngIf="glReport.balancetests.summary.currdebit > 0">{{glReport.balancetests.summary.currdebit | number : '1.2-2'}}</span> </td>
+                                <td class="right"><span *ngIf="glReport.balancetests.summary.currcredit > 0">{{glReport.balancetests.summary.currcredit | number : '1.2-2'}}</span> </td>
+                                <td class="right"><span *ngIf="glReport.balancetests.summary.afdebit > 0">{{c | number : '1.2-2'}}</span> </td>
+                                <td class="right"><span *ngIf="glReport.balancetests.summary.afcredit > 0">{{glReport.balancetests.summary.afcredit | number : '1.2-2'}}</span> </td>            
+                              </tr>
                         </tbody>
                     </table>
 
